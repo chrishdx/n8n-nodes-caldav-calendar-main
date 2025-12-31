@@ -45,15 +45,18 @@ export class CaldavApi implements ICredentialType {
 		},
 	};
 
+	// CalDAV requires PROPFIND for proper principal discovery
+	// Type assertion needed since n8n's IHttpRequestMethods doesn't include WebDAV methods
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: '={{$credentials.serverUrl}}',
 			url: '',
-			method: 'GET',
+			method: 'PROPFIND' as unknown as 'GET',
 			headers: {
 				'Content-Type': 'application/xml; charset=utf-8',
 				'Depth': '0',
 			},
+			body: '<?xml version="1.0" encoding="UTF-8"?><d:propfind xmlns:d="DAV:"><d:prop><d:current-user-principal/></d:prop></d:propfind>',
 		},
 	};
 } 

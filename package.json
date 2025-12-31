@@ -1,21 +1,22 @@
 {
-  "name": "n8n-nodes-caldav-calendar",
-  "version": "2.0.3",
-  "description": "n8n community node for CalDAV calendar integration",
+  "name": "@chrishdx/n8n-nodes-caldav",
+  "version": "1.0.0",
+  "description": "n8n community node for CalDAV calendar integration with improved iCloud support",
   "keywords": [
     "n8n-community-node-package",
     "caldav",
-    "calendar"
+    "calendar",
+    "icloud",
+    "apple"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/mediabc/n8n-nodes-caldav-calendar",
+  "homepage": "https://github.com/chrishdx/n8n-nodes-caldav",
   "author": {
-    "name": "oambc",
-    "email": "oa@mediabc.ru"
+    "name": "chrishdx"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mediabc/n8n-nodes-caldav-calendar.git"
+    "url": "https://github.com/chrishdx/n8n-nodes-caldav.git"
   },
   "engines": {
     "node": ">=18.10",
